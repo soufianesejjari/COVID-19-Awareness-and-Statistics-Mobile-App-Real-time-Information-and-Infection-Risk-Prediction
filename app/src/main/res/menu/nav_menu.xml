@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="statiqtique"
+        android:id="@+id/statistiqua"
+        android:icon="@drawable/safe_24"
+        />
+    <item android:title="type de covid"
+
+        android:id="@+id/typea"
+        android:icon="@drawable/types_24"
+        />
+    <item android:title="Vaccination"
+
+        android:id="@+id/vaccin"
+        android:icon="@drawable/info"
+        />
+</menu>
