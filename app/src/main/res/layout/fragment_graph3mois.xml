@@ -3,19 +3,511 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#10000000"
     tools:context=".Statistique.FragmentGraph.Graph3mois">
 
-
-
-    <com.github.mikephil.charting.charts.CombinedChart
-        android:id="@+id/barChart"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="9dp"
-        android:visibility="visible" />
+        android:fillViewport="true"
+        android:background="@drawable/rund80"
+
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+
+            <LinearLayout
+                android:background="@drawable/rund80"
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:paddingTop="10dp"
+                    android:paddingStart="20dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+
+                        android:text="Evolution de nombre de cas par jour"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/jaune"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+
+
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="-20dp"
+                        android:layout_marginBottom="21dp"
+                        />
 
 
 
 
+                </RelativeLayout>
+                <com.github.mikephil.charting.charts.CombinedChart
+                    android:id="@+id/barChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_margin="15dp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:radius="12dp"
+                android:scaleType="centerCrop"
+
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentStart="true"
+
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="2dp"
+
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="-20dp"
+                        android:layout_marginBottom="21dp"
+
+
+                        android:text="Period Statistique"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/mauve_m"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_margin="8dp"
+                android:background="@drawable/radue60clr"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/radue60clr"
+                    android:radius="12dp"
+                    android:scaleType="centerCrop"
+
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentStart="true"
+
+
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="11dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/cascov" />
+
+                        <TextView
+                            android:id="@+id/cas"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginBottom="41dp"
+                            android:text="3000"
+                            android:textColor="@color/jaune"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/cas2"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="-1dp"
+                            android:layout_marginBottom="19dp"
+                            android:text="30 par jour "
+                            android:textAlignment="center"
+
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="233dp"
+                            android:layout_height="39dp"
+
+
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="80dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="79dp"
+                            android:layout_marginBottom="41dp"
+
+                            android:text="les cas confirmé"
+                            android:textColor="@color/black"
+                            android:textSize="23dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+
+
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="77dp"
+                            android:layout_marginTop="34dp"
+                            android:layout_marginEnd="119dp"
+                            android:layout_marginBottom="11dp"
+
+                            android:text="selon les donnes disponible"
+                            android:textSize="14sp"
+                            android:textStyle="italic" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <View style="@style/Divider"
+                    android:layout_marginRight="20dp"
+                    android:background="#40000000"
+                    android:layout_marginLeft="20dp"/>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/radue60clr"
+
+                    android:scaleType="centerCrop"
+
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentStart="true"
+
+
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="11dp"
+                            android:layout_marginTop="11dp"
+                            android:src="@drawable/mortcov" />
+
+                        <TextView
+                            android:id="@+id/morts"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginBottom="41dp"
+                            android:text="3000"
+                            android:textColor="@color/mauve_m"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/morts2"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="-1dp"
+                            android:layout_marginBottom="19dp"
+                            android:text="30 par jour "
+                            android:textAlignment="center"
+
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="193dp"
+                            android:layout_height="35dp"
+
+
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="80dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="119dp"
+                            android:layout_marginBottom="41dp"
+
+                            android:text="les Morts "
+                            android:textColor="@color/black"
+                            android:textSize="23dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="34dp"
+
+
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="77dp"
+                            android:layout_marginTop="35dp"
+                            android:layout_marginEnd="99dp"
+                            android:layout_marginBottom="11dp"
+
+                            android:text="total des morts dans cet période "
+                            android:textSize="14sp"
+                            android:textStyle="italic" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <View style="@style/Divider"
+                    android:layout_marginRight="20dp"
+                    android:background="#40000000"
+                    android:layout_marginLeft="20dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+
+                    android:scaleType="centerCrop"
+
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentStart="true"
+
+
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="11dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/activecovv" />
+
+                        <TextView
+                            android:id="@+id/active"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginBottom="41dp"
+                            android:text="3000"
+                            android:textColor="@color/pink1"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/active2"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="-1dp"
+                            android:layout_marginBottom="19dp"
+                            android:text="30 par jour "
+                            android:textAlignment="center"
+
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="254dp"
+                            android:layout_height="34dp"
+
+
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="71dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="67dp"
+                            android:layout_marginBottom="46dp"
+
+                            android:text="Le chiffre d'aujourd'hui"
+                            android:textColor="@color/black"
+                            android:textSize="23dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="34dp"
+
+
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="77dp"
+                            android:layout_marginTop="35dp"
+                            android:layout_marginEnd="99dp"
+                            android:layout_marginBottom="11dp"
+
+                            android:text="le plus grand nombre confirme "
+                            android:textSize="14sp"
+                            android:textStyle="italic" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <View style="@style/Divider"
+                    android:layout_marginRight="20dp"
+                    android:background="#40000000"
+                    android:layout_marginLeft="20dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+
+                    android:scaleType="centerCrop"
+
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentStart="true"
+
+
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="11dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/recovredco" />
+
+                        <TextView
+                            android:id="@+id/recored"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginBottom="41dp"
+                            android:text="3000"
+                            android:textColor="@color/mauve_m"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/recored2"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="-1dp"
+                            android:layout_marginBottom="19dp"
+                            android:text="30 par jour "
+                            android:textAlignment="center"
+
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="210dp"
+                            android:layout_height="29dp"
+
+
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="75dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="107dp"
+                            android:layout_marginBottom="47dp"
+
+                            android:text="les gueris "
+                            android:textColor="@color/black"
+                            android:textSize="23dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="37dp"
+
+
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="72dp"
+                            android:layout_marginTop="37dp"
+                            android:layout_marginEnd="66dp"
+                            android:layout_marginBottom="6dp"
+
+                            android:text="on estime que la durée de guérison 15j "
+                            android:textSize="14sp"
+                            android:textStyle="italic" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </FrameLayout>

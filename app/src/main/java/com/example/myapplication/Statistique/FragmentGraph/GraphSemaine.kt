@@ -7,43 +7,48 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.R
+import com.example.myapplication.ViewModel.CovInfoViewModel
 import com.example.myapplication.ViewModel.StatistiqueViewModel
+import com.example.myapplication.ViewModel.ViewModelFactory
 import com.example.myapplication.data.CovidData
-import com.github.mikephil.charting.charts.BarChart
 import com.github.mikephil.charting.charts.CombinedChart
-import com.github.mikephil.charting.data.BarEntry
-import com.github.mikephil.charting.data.Entry
-import com.github.mikephil.charting.data.LineData
-import com.github.mikephil.charting.data.LineDataSet
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 
-private lateinit var dataCoved: List<CovidData>
-private lateinit var dataS :ArrayList<Entry>
-private lateinit var dataS2 :ArrayList<BarEntry>
-private lateinit var dataS3 :ArrayList<BarEntry>
-private lateinit var lineDataSet: LineDataSet
-private lateinit var linedata : LineData
-private lateinit var barchartdata : BarChart
-private lateinit var chart: CombinedChart
-private lateinit var chart2: CombinedChart
-
-
-
 @SuppressLint("StaticFieldLeak")
 private lateinit var statistiqueViewModel: StatistiqueViewModel
 
+lateinit var viewModel: CovInfoViewModel
+var viewModelFactory: ViewModelFactory = ViewModelFactory()
+
 class GraphSemaine : Fragment() {
+    private lateinit var dataCoved: List<CovidData>
+
+    private lateinit var chart: CombinedChart
+    private lateinit var chart2: CombinedChart
+
+    private lateinit var cas: TextView
+    private lateinit var morts: TextView
+    private lateinit var active: TextView
+    private lateinit var recovred: TextView
+
+    private lateinit var cas2: TextView
+    private lateinit var morts2: TextView
+    private lateinit var active2: TextView
+    private lateinit var recovred2: TextView
+    //progress
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         statistiqueViewModel = ViewModelProvider(this).get(StatistiqueViewModel::class.java)
+        viewModel = ViewModelProvider(this, viewModelFactory).get(CovInfoViewModel::class.java)
 
     }
 
@@ -54,31 +59,58 @@ class GraphSemaine : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_graph_semaine, container, false)
     }
+
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        statistiqueViewModel.getData()
+        //      viewModel.getData()
         observeViewModel()
 
 
-
     }
+
     @RequiresApi(Build.VERSION_CODES.O)
     private fun observeViewModel() {
-        statistiqueViewModel.observData().observe(
+        viewModel.observData().observe(
             viewLifecycleOwner,
         ) { t ->
-            if (t==null){
-                Log.i("ssssssssssss","pas de enternet ou donnes local")
-            }
-            else{
-                dataCoved =t
+            if (t.data == null) {
+                Log.i("ssssssssssss", "pas de enternet ou donnes local")
+            } else {
+                dataCoved = t.data
                 GlobalScope.launch(Dispatchers.Main) {
                     chart = requireView().findViewById(R.id.barChart)
-                //    chart2=requireView().findViewById(R.id.barChart2)
+                    //    chart2=requireView().findViewById(R.id.barChart2)
                     statistiqueViewModel.getSemaineGraphe(chart)
-                  //  statistiqueViewModel.getMoiGraphe(chart2)
+                    val listDonne: MutableMap<String, Int> =
+                        statistiqueViewModel.getSemaineGraphe(chart)
+
+                    cas = requireView().findViewById(R.id.cas)
+                    morts = requireView().findViewById(R.id.morts)
+                    active = requireView().findViewById(R.id.active)
+                    recovred = requireView().findViewById(R.id.recored)
+
+                    //progress
+
+                    cas2 = requireView().findViewById(R.id.cas2)
+                    morts2 = requireView().findViewById(R.id.morts2)
+                    active2 = requireView().findViewById(R.id.active2)
+                    recovred2 = requireView().findViewById(R.id.recored2)
+
+                    cas.text = listDonne["cas"].toString()
+                    morts.text = listDonne["mort"].toString()
+
+                    active.text = listDonne["plusGrand"].toString()
+                    recovred.text = listDonne["recovredCas"].toString()
+
+
+                    cas2.text = listDonne["moyenCas"].toString()+" par jour"
+                    morts2.text = listDonne["moyenMort"].toString()+" par jour"
+                    active2.text = ""
+                    recovred2.text = listDonne["recovredMoyen"].toString()+" par jour"
+
+
 
                 }
 
@@ -87,8 +119,6 @@ class GraphSemaine : Fragment() {
 
         }
     }
-
-
 
 
 }

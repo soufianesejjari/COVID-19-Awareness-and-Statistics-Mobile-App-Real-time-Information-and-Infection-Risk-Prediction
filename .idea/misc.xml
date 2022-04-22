@@ -3,21 +3,46 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/drawable-v24/info.xml" value="0.1305" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/drawable-v24/vaccin.xml" value="0.1615" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/drawable/boutton.xml" value="0.1365" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/drawable/carre.xml" value="0.1305" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/drawable/cercle.xml" value="0.2075" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/drawable/covid_view.xml" value="0.2155" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2115" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/drawable/infoplus.xml" value="0.152" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/drawable/radius_withe.xml" value="0.1" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/drawable/radue60clr.xml" value="0.159" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/drawable/radueo80.xml" value="0.1075" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/drawable/rund80.xml" value="0.113" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/drawable/square_24.xml" value="0.1" />
-        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/activity_main.xml" value="0.18" />
-        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/custom_marker_view.xml" value="0.1" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/drawable/test_view.xml" value="0.2155" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/activity_intro.xml" value="0.15208333333333332" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/activity_typeco.xml" value="0.18" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/activity_typev.xml" value="0.25" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/custom_marker_view.xml" value="0.22" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/custom_marker_view_layout.xml" value="0.1" />
-        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/fragment_graph3mois.xml" value="0.18478260869565216" />
-        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/fragment_graph_bonus.xml" value="0.18478260869565216" />
-        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/fragment_graph_mois.xml" value="0.18478260869565216" />
-        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/fragment_graph_semaine.xml" value="0.18478260869565216" />
-        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/fragment_types.xml" value="0.18478260869565216" />
-        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/statistique_fragment.xml" value="0.2" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/fragment_graph3mois.xml" value="0.18" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/fragment_graph_bonus.xml" value="0.1" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/fragment_graph_mois.xml" value="0.25" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/fragment_graph_semaine.xml" value="0.25" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/fragment_test_.xml" value="0.25" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/fragment_types.xml" value="0.25" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/fragment_vaccin.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/item2.xml" value="0.22" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/laoding_activity.xml" value="0.17844202898550723" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/layout_screen.xml" value="0.15208333333333332" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/pagetest.xml" value="0.1533980582524272" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/statistique_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/test.xml" value="0.26136363636363635" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/type_item.xml" value="0.15" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/layout/vaccindetail.xml" value="0.27008547008547007" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/menu/menu.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/menu/nav_menu.xml" value="0.1" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/menu/nav_menu.xml" value="0.22" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/MyApplication6/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
       </map>
     </option>
   </component>

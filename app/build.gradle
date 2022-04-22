@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+
 }
 
 android {
@@ -40,6 +41,7 @@ dependencies {
 //room
 
     implementation("androidx.room:room-runtime:2.4.2")
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
     annotationProcessor("androidx.room:room-compiler:2.4.2")
     kapt "androidx.room:room-compiler:2.4.2"
 
@@ -75,5 +77,18 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+
+    //date
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+
+    // for adding recyclerview
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+
+    //intent
+    implementation "com.joom.smuggler:smuggler-plugin:1.1.8"
+
+
+
+    implementation 'org.pmml4s:pmml4s_2.11:0.9.15'
 
 }

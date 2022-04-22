@@ -10,7 +10,8 @@ import com.example.myapplication.Statistique.FragmentGraph.GraphMois
 import com.example.myapplication.Statistique.FragmentGraph.GraphSemaine
 
 
-class GraphAdapter(fragmentManager: FragmentManager,lifecycle: Lifecycle): FragmentStateAdapter(fragmentManager, lifecycle) {
+class GraphAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
+    FragmentStateAdapter(fragmentManager, lifecycle) {
 
 
     override fun getItemCount(): Int {
@@ -18,23 +19,23 @@ class GraphAdapter(fragmentManager: FragmentManager,lifecycle: Lifecycle): Fragm
     }
 
     override fun createFragment(position: Int): Fragment {
-        return   when(position){
-            0->{
+        return when (position) {
+            0 -> {
                 GraphSemaine()
             }
-            1->{
+            1 -> {
                 GraphMois()
 
             }
-            2->{
+            2 -> {
                 Graph3mois()
 
             }
-            3->{
+            3 -> {
                 GraphBonus()
 
             }
-            else->{
+            else -> {
                 Fragment()
             }
 

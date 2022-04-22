@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/testLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".covid_type"
+                tools:ignore="ExtraText">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="175dp"
+                    android:layout_height="144dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="32dp"
+                    android:text="La COVID-19 affecte les individus de différentes manières. La plupart des personnes infectées développent une forme légère à modérée de la maladie et guérissent sans hospitalisation. "
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="197dp"
+                    android:layout_height="246dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView7"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView7"
+                    app:layout_constraintTop_toTopOf="@+id/textView7"
+                    app:srcCompat="@drawable/vaccint" />
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="Test Rapide"
+                    android:textColor="@color/mauve_m"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.06"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7"
+                    tools:ignore="MissingConstraints" />
+
+                <View
+                    android:id="@+id/view8"
+                    android:layout_width="338dp"
+                    android:layout_height="1328dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/infoplus"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView28"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Avez-vous de la toux?"
+                    android:textColor="@color/mauve_m"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.093"
+                    app:layout_constraintStart_toEndOf="@+id/view8"
+                    app:layout_constraintStart_toStartOf="@+id/view8"
+                    app:layout_constraintTop_toTopOf="@+id/view8" />
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:text="Avez-vous de la fièvre?"
+                    android:textColor="@color/mauve_m"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="@+id/cough"
+                    app:layout_constraintHorizontal_bias="0.1"
+                    app:layout_constraintStart_toStartOf="@+id/cough"
+                    app:layout_constraintTop_toBottomOf="@+id/cough" />
+
+                <RadioGroup
+                    android:id="@+id/cough"
+                    android:layout_width="306dp"
+                    android:layout_height="82dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView29"
+                    app:layout_constraintHorizontal_bias="0.12"
+                    app:layout_constraintStart_toStartOf="@+id/textView29"
+                    app:layout_constraintTop_toBottomOf="@+id/textView29">
+
+                    <RadioButton
+                        android:id="@+id/coughoui"
+                        android:layout_width="68dp"
+                        android:layout_height="wrap_content"
+                        android:text="Oui" />
+
+                    <RadioButton
+                        android:id="@+id/coughno"
+                        android:layout_width="79dp"
+                        android:layout_height="31dp"
+                        android:text="Non" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/fever"
+                    android:layout_width="306dp"
+                    android:layout_height="82dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="@+id/cough"
+                    app:layout_constraintHorizontal_bias="0.3"
+                    app:layout_constraintStart_toStartOf="@+id/textView30"
+                    app:layout_constraintTop_toBottomOf="@+id/textView30">
+
+                    <RadioButton
+                        android:id="@+id/feveroui"
+                        android:layout_width="157dp"
+                        android:layout_height="wrap_content"
+                        android:text="Oui" />
+
+                    <RadioButton
+                        android:id="@+id/feverno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Non" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:text="Avez-vous mal à la gorge?"
+                    android:textColor="@color/mauve_m"
+                    android:textSize="16dp"
+                    app:layout_constraintStart_toStartOf="@+id/fever"
+                    app:layout_constraintTop_toBottomOf="@+id/fever"
+                    tools:ignore="MissingConstraints" />
+
+                <RadioGroup
+                    android:id="@+id/sore"
+                    android:layout_width="306dp"
+                    android:layout_height="82dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="@+id/fever"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/fever"
+                    app:layout_constraintTop_toBottomOf="@+id/textView31">
+
+                    <RadioButton
+                        android:id="@+id/soreoui"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Oui" />
+
+                    <RadioButton
+                        android:id="@+id/soreno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Non" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Avez-vous un essoufflement?"
+                    android:textColor="@color/mauve_m"
+                    android:textSize="16dp"
+                    app:layout_constraintStart_toStartOf="@+id/sore"
+                    app:layout_constraintTop_toBottomOf="@+id/sore" />
+
+                <RadioGroup
+                    android:id="@+id/breath"
+                    android:layout_width="306dp"
+                    android:layout_height="82dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="@+id/sore"
+                    app:layout_constraintStart_toStartOf="@+id/sore"
+                    app:layout_constraintTop_toBottomOf="@+id/textView32">
+
+                    <RadioButton
+                        android:id="@+id/breathoui"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Oui" />
+
+                    <RadioButton
+                        android:id="@+id/breathno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Non" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton17"
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:text="RadioButton" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="Avez-vous du mal à tete?"
+                    android:textColor="@color/mauve_m"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.053"
+                    app:layout_constraintStart_toStartOf="@+id/breath"
+                    app:layout_constraintTop_toBottomOf="@+id/breath" />
+
+                <RadioGroup
+                    android:id="@+id/head"
+                    android:layout_width="306dp"
+                    android:layout_height="82dp"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintEnd_toEndOf="@+id/breath"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/breath"
+                    app:layout_constraintTop_toBottomOf="@+id/textView35">
+
+                    <RadioButton
+                        android:id="@+id/headoui"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Oui" />
+
+                    <RadioButton
+                        android:id="@+id/headno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Non" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Quel age Avez-vous?"
+                    android:textColor="@color/mauve_m"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.094"
+                    app:layout_constraintStart_toStartOf="@+id/head"
+                    app:layout_constraintTop_toBottomOf="@+id/head" />
+
+                <EditText
+                    android:id="@+id/age"
+                    android:layout_width="318dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="16dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="   Veuillez entrer votre age"
+                    android:textColor="#757474"
+                    app:layout_constraintEnd_toEndOf="@+id/head"
+                    app:layout_constraintHorizontal_bias="0.061"
+                    app:layout_constraintStart_toStartOf="@+id/head"
+                    app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+                <TextView
+                    android:id="@+id/textView37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Vous-Etes"
+                    android:textColor="@color/mauve_m"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.07"
+                    app:layout_constraintStart_toStartOf="@+id/age"
+                    app:layout_constraintTop_toBottomOf="@+id/age" />
+
+                <RadioGroup
+                    android:id="@+id/gender"
+                    android:layout_width="306dp"
+                    android:layout_height="82dp"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintEnd_toEndOf="@+id/age"
+                    app:layout_constraintHorizontal_bias="0.333"
+                    app:layout_constraintStart_toStartOf="@+id/age"
+                    app:layout_constraintTop_toBottomOf="@+id/textView37">
+
+                    <RadioButton
+                        android:id="@+id/homme"
+                        android:layout_width="285dp"
+                        android:layout_height="wrap_content"
+                        android:text="Homme" />
+
+                    <RadioButton
+                        android:id="@+id/femme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Femme" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="Avez vous en contact avec quelqu'un malade?"
+                    android:textColor="@color/mauve_m"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="@+id/gender"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/gender"
+                    app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+                <RadioGroup
+                    android:id="@+id/indication"
+                    android:layout_width="306dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintEnd_toEndOf="@+id/gender"
+                    app:layout_constraintStart_toStartOf="@+id/gender"
+                    app:layout_constraintTop_toBottomOf="@+id/textView39">
+
+                    <RadioButton
+                        android:id="@+id/contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Oui" />
+
+                    <RadioButton
+                        android:id="@+id/abroad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Non" />
+
+                    <RadioButton
+                        android:id="@+id/other"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="je ne sais pas" />
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/validation"
+                    android:layout_width="191dp"
+                    android:layout_height="37dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/infoplus"
+                    android:text="Valider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.412"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/indication" />
+                <![CDATA[
+
+
+
+
+
+            />
+
+
+
+
+        ]]>
+
+
+                />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/resultLL"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="774dp"
+                tools:context=".covid_type"
+                tools:ignore="ExtraText">
+
+                <TextView
+                    android:id="@+id/textView79"
+                    android:layout_width="175dp"
+                    android:layout_height="144dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="32dp"
+                    android:text="La COVID-19 affecte les individus de différentes manières. La plupart des personnes infectées développent une forme légère à modérée de la maladie et guérissent sans hospitalisation. "
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="197dp"
+                    android:layout_height="246dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView79"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView79"
+                    app:layout_constraintTop_toTopOf="@+id/textView79"
+                    app:srcCompat="@drawable/vaccint" />
+
+                <TextView
+                    android:id="@+id/textView280"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="64dp"
+                    android:text="Resultat du Test"
+                    android:textColor="@color/mauve_m"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.085"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView79"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/textView41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="64dp"
+                    android:text="Le résultat du test indique que vous etes:"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView280" />
+
+                <TextView
+                    android:id="@+id/result"
+                    android:layout_width="159dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="24dp"
+                    android:text="result"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/textView41"
+                    app:layout_constraintHorizontal_bias="0.53"
+                    app:layout_constraintStart_toStartOf="@+id/textView41"
+                    app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+                <TextView
+                    android:id="@+id/textView42"
+                    android:layout_width="362dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="64dp"
+                    android:text="Les résultats de ce test ne sont pas précis à 100 %, ce ne sont que des prédictions basées sur plusieurs facteurs "
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintEnd_toEndOf="@+id/textView41"
+                    app:layout_constraintHorizontal_bias="0.181"
+                    app:layout_constraintStart_toStartOf="@+id/textView41"
+                    app:layout_constraintTop_toBottomOf="@+id/result" />
+
+                <TextView
+                    android:id="@+id/textView43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:text="-Vote pourcentage d'etre positif est de:"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView42"
+                    app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
+                <TextView
+                    android:id="@+id/textView44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="44dp"
+                    android:text="-Votre pourcentage d'etre negatif est de:"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView43"
+                    app:layout_constraintTop_toBottomOf="@+id/textView43" />
+
+                <TextView
+                    android:id="@+id/positif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="positif"
+                    android:textColor="#4CAF50"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView43"
+                    app:layout_constraintEnd_toEndOf="@+id/textView42"
+                    app:layout_constraintStart_toEndOf="@+id/textView43"
+                    app:layout_constraintTop_toTopOf="@+id/textView43" />
+
+                <TextView
+                    android:id="@+id/negatif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="negatif"
+                    android:textColor="#B50606"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView44"
+                    app:layout_constraintEnd_toEndOf="@+id/positif"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/textView44"
+                    app:layout_constraintTop_toTopOf="@+id/textView44"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+</ScrollView>

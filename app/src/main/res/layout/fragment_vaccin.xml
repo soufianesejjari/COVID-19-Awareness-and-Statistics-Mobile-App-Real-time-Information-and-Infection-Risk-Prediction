@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vaccin.VaccinFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".types.ApisTypes.TypeCovidDetail">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="930dp"
+                tools:context=".covid_type">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="201dp"
+                    android:layout_height="226dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="La pandémie de COVID-19 qui a frappé le monde bat aujourd’hui son plein. Parallèlement aux actions menées par l’OMS et ses partenaires pour riposter à cette pandémie (suivi de la pandémie, conseils sur les interventions essentielles, distribution de fournitures médicales vitales à ceux qui en ont besoin), une course a été engagée pour développer et déployer des vaccins efficaces et sans risque."
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="197dp"
+                    android:layout_height="246dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView7"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView7"
+                    app:layout_constraintTop_toTopOf="@+id/textView7"
+                    app:srcCompat="@drawable/vaccint" />
+
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Vaccination"
+                    android:textColor="@color/mauve_m"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.045"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="122dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Les vaccins sauvent des millions de vies chaque année. Leur mode d’action consiste à entraîner et à préparer le système immunitaire (défenses naturelles de l’organisme) à reconnaître et à combattre les virus et les bactéries qu’ils ciblent. Ainsi, si l’organisme se trouve par la suite exposé à ces mêmes agents pathogènes, il est immédiatement prêt à les détruire, ce qui permet de prévenir la maladie."
+                    android:textColor="@color/noir"
+                    android:textSize="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.048"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="149dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Types des vaccins"
+                    android:textColor="@color/mauve_m"
+                    android:textSize="18dp"
+
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.061"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:transitionName="Vaccin"
+
+                    android:id="@+id/recycleVaccin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="213dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView20"
+                    app:layout_constraintTop_toBottomOf="@+id/textView20"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:ignore="MissingConstraints" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -11,7 +11,8 @@ interface CovidDataDao {
 
     //select all data
     @Query("SELECT * FROM covidData")
-    fun covidDataSelect():List<CovidData>
+    fun covidDataSelect(): List<CovidData>
+
     //ajoute  tous les donnes
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertCovidData(covidDataList: List<CovidData>)

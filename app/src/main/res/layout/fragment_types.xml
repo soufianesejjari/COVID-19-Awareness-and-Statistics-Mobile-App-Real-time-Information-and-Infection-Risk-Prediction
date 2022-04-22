@@ -1,37 +1,458 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Statistique.TypesFragment">
+    >
 
 
     <LinearLayout
-        android:layout_width="410dp"
-        android:layout_height="487dp"
-        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.648">
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tablayout"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="120dp">
+            android:layout_height="865dp">
 
-        </com.google.android.material.tabs.TabLayout>
-        <androidx.viewpager2.widget.ViewPager2
-            android:layout_width="match_parent"
-            android:layout_height="254dp"
-            >
 
-        </androidx.viewpager2.widget.ViewPager2>
+            <View
+                android:id="@+id/view2"
+                android:layout_width="370dp"
+                android:layout_height="181dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/covid_view"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.466"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="44dp"
+                android:fontFamily="sans-serif"
+                android:rotationX="4"
+                android:text="Cov"
+                android:textAlignment="viewStart"
+                android:textColor="@color/blue_M2"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="38dp"
+                android:layout_height="24dp"
+                android:text="Info"
+                android:textAlignment="viewStart"
+                android:textColor="@color/jaune"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/corona"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textView1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.813" />
+
+            <TextView
+                android:id="@+id/corona"
+                android:layout_width="242dp"
+                android:layout_height="92dp"
+                android:layout_marginEnd="50dp"
+                android:text="Les coronavirus forment une famille de virus variés (Coronaviridae) qui peuvent infecter aussi bien l'homme que l'animal."
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.183"
+                app:layout_constraintStart_toStartOf="@+id/view2"
+                app:layout_constraintTop_toBottomOf="@+id/textView1"
+                app:layout_constraintVertical_bias="0.135"
+                tools:ignore="InvalidId"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="108dp"
+                android:layout_height="128dp"
+                android:layout_marginStart="244dp"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintStart_toStartOf="@+id/view2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.765"
+                app:srcCompat="@drawable/covidview2" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="98dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="40dp"
+                android:background="@drawable/custome_button"
+                android:text="Appeler 141"
+                android:textAlignment="center"
+                android:textColor="@color/noir"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/corona"
+                app:layout_constraintVertical_bias="0.391" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:text="Priv"
+                android:textColor="@color/mauve_m"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                app:layout_constraintVertical_bias="0.058" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ension"
+                android:textColor="@color/jaune"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView14"
+                app:layout_constraintStart_toEndOf="@+id/textView14"
+                app:layout_constraintTop_toTopOf="@+id/textView14"
+                app:layout_constraintVertical_bias="0.31" />
+
+            <HorizontalScrollView
+                android:id="@+id/scrollView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                app:layout_constraintVertical_bias="0.0">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="85dp"
+                            android:layout_height="94dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.054"
+                            app:layout_constraintStart_toEndOf="@+id/imageView2"
+                            app:layout_constraintTop_toTopOf="@+id/imageView2"
+                            app:layout_constraintVertical_bias="0.0"
+                            app:srcCompat="@drawable/mask" />
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:text="Mets ton mask"
+                            android:textAlignment="center"
+                            android:textColor="@color/mauve_m"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                            app:layout_constraintEnd_toStartOf="@+id/textView3"
+                            app:layout_constraintStart_toStartOf="@+id/scrollView3"
+                            app:layout_constraintTop_toTopOf="@+id/textView3"
+                            app:layout_constraintVertical_bias="0.041" />
+
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="85dp"
+                            android:layout_height="93dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.061"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView9"
+                            app:layout_constraintVertical_bias="0.045"
+                            app:srcCompat="@drawable/handwash" />
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="78dp"
+                            android:layout_height="40dp"
+                            android:text="Lave tes mains"
+                            android:textAlignment="center"
+                            android:textColor="@color/mauve_m"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/scrollView3"
+                            app:layout_constraintEnd_toStartOf="@+id/textView4"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="85dp"
+                            android:layout_height="93dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.703"
+                            app:layout_constraintStart_toEndOf="@+id/imageView5"
+                            app:layout_constraintTop_toTopOf="@+id/imageView5"
+                            app:layout_constraintVertical_bias="0.009"
+                            app:srcCompat="@drawable/sinitize" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="95dp"
+                            android:layout_height="50dp"
+                            android:layout_marginEnd="24dp"
+                            android:text="désinfecter "
+                            android:textAlignment="center"
+                            android:textColor="@color/mauve_m"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                            app:layout_constraintEnd_toStartOf="@+id/textView5"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="85dp"
+                            android:layout_height="93dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.137"
+                            app:layout_constraintStart_toEndOf="@+id/imageView4"
+                            app:layout_constraintTop_toTopOf="@+id/imageView4"
+                            app:layout_constraintVertical_bias="0.003"
+                            app:srcCompat="@drawable/sneez" />
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="75dp"
+                            android:layout_height="37dp"
+                            android:text="éternue dans ton coude"
+                            android:textAlignment="center"
+                            android:textColor="@color/mauve_m"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="85dp"
+                            android:layout_height="93dp"
+                            android:src="@drawable/mask"/>
+                        <TextView
+                            android:layout_width="75dp"
+                            android:layout_height="39dp"
+                            android:text="mask"
+                            android:textColor="@color/mauve_m"
+                            android:textStyle="bold"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="352dp"
+                android:layout_height="150dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/typecovid"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.516"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view2"
+                app:layout_constraintVertical_bias="0.882"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="163dp"
+                android:layout_height="120dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.121"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view2"
+                app:layout_constraintVertical_bias="0.854"
+                app:srcCompat="@drawable/fight2"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Les 4 types de COVID"
+                android:textColor="@color/mauve_m"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.81"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.757" />
+
+            <Button
+                android:id="@+id/type"
+                android:transitionName="profile"
+
+                android:layout_width="112dp"
+                android:layout_height="41dp"
+                android:background="@drawable/infoplus"
+                android:clickable="false"
+                android:text="Plus d'Info"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/viedddw"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintHorizontal_bias="0.585"
+                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="166dp"
+                android:layout_height="58dp"
+                android:text="Les coronavirus constituent une famille de virus dont certains peuvent infecter les humains, entraînant le plus souvent des symptômes bénins de type rhume"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.859"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6"
+                app:layout_constraintVertical_bias="0.055" />
+
+
+            <View
+                android:id="@+id/viedddw"
+                android:layout_width="352dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="4dp"
+
+                android:background="@drawable/typecovid"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.516"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.882"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/imageVdiew7"
+                android:layout_width="163dp"
+                android:layout_height="120dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="@+id/imageView7"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/viedddw"
+                app:layout_constraintVertical_bias="0.411"
+                app:srcCompat="@drawable/fight2"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/texddtView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Les variants du Corona"
+                android:textColor="@color/mauve_m"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/type"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.84"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view"
+                app:layout_constraintVertical_bias="0.118" />
+
+            <TextView
+                android:id="@+id/textVddiew8"
+                android:layout_width="184dp"
+                android:layout_height="80dp"
+                android:text="Les coronavirus constituent une famille de virus dont certains peuvent infecter les humains, entraînant le plus souvent des symptômes bénins de type rhume"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="@+id/viedddw"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintTop_toBottomOf="@+id/textView6"
+                app:layout_constraintVertical_bias="0.18" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="375dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="12dp"
+                android:text="Ayez les bons réflexes lorsque vous éternuez et toussez : couvrez-vous la bouche et le nez avec le pli du coude ou un mouchoir lorsque vous toussez ou éternuez, puis jetez immédiatement le mouchoir usagé et lavez-vous les mains."
+                android:textAlignment="center"
+                android:textColor="@color/blueC"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
