@@ -7,7 +7,7 @@ Les dernières statistiques sur le COVID-19 au Maroc, avec des graphiques et des
 Des informations sur les types de vaccins disponibles et les campagnes de vaccination en cours.
 Un modèle de machine learning qui permet aux utilisateurs de savoir leur risque d'infection par le COVID-19.
 ## Screenshot of Covid Stats Morocco
-h
+![des images de l'application](covInfo.png)
 
 ## Technologies
 Covid Stats Morocco a été développé en utilisant Kotlin et l'API de statistiques sur le COVID-19 au Maroc.
